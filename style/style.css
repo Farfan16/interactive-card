@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+html,
+body,
+p {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background: white;
+}
+
+.background-card {
+  background: url(../images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+}
+
+.card-front, .card-back {
+  background: url(../images/bg-card-front.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 15rem;
+  right: -5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: fit-content;
+  height: 10rem;
+  padding: 1rem;
+  z-index: 10;
+  border-radius: 0.7rem;
+  box-shadow: 10px 10px 24px -2px rgba(0, 0, 0, 0.28);
+  -webkit-box-shadow: 10px 10px 24px -2px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 10px 10px 24px -2px rgba(0, 0, 0, 0.28);
+}
+.card-front .card-info, .card-back .card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 28px;
+  font-weight: 300;
+  color: #ffffff;
+}
+.card-front .card-info .user-info, .card-back .card-info .user-info {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-back {
+  background: url(../images/bg-card-back.png);
+  background-size: cover;
+  z-index: 20;
+  top: 30rem;
+  right: -10rem;
+  width: 19.3rem;
+  color: #ffffff;
+  justify-content: center;
+  align-items: flex-end;
+}
+.card-back .card-cvc {
+  color: #dedddf;
+  margin-bottom: 3px;
+  margin-right: 1rem;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  background-color: #ffffff;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 10rem;
+}
+.form .input-container {
+  display: flex;
+  flex-direction: column;
+  width: 76%;
+}
+.form .input-container label {
+  color: #21092f;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.form .input-container input {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+  border: 1px solid #dedddf;
+}
+.form .input-container input ::placeholder {
+  color: #8e8593;
+}
+.form .input-container input[type=text] {
+  width: 100%;
+}
+.form .date-cvc {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+}
+.form .date-cvc .input-container {
+  width: 100%;
+}
+.form .date-cvc .input-container .month-year {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.form .date-cvc .input-container:last-child input {
+  width: 50%;
+}
+.form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  background-color: #21092f;
+  width: 80%;
+  border-radius: 0.5rem;
+  border: 0;
+  color: #ffffff;
+  padding: 0.6rem;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="background-card">
+        <div class="card-front">
+          <img src="./images/card-logo.svg" alt="Card Logo" width="64px" />
+          <div class="card-info">
+            <p id="credit-number">0000 0000 0000 0000</p>
+            <div class="user-info">
+              <p id="user-name">John Doe</p>
+              <p id="card-exp">
+                <span id="month-exp">00</span>/<span id="year-exp">00</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card-back">
+          <p class="card-cvc" id="card-cvc">000</p>
+        </div>
+      </div>
+      <div class="form-container">
+        <form action="" class="form">
+          <div class="input-container">
+            <label for="name">Cardholder Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="e.g John Doe"
+            />
+          </div>
+          <div class="input-container">
+            <label for="card-number">Card Number</label>
+            <input
+              type="text"
+              name="card-number"
+              id="card-number"
+              placeholder="e.g John Doe"
+            />
+          </div>
+          <div class="date-cvc">
+            <div class="input-container">
+              <label for="date">Exp. Date (MM/YY)</label>
+              <div class="month-year">
+                <input
+                  type="number"
+                  name="date-month"
+                  id="date-month"
+                  placeholder="MM"
+                  min="1"
+                  max="12"
+                />
+                <input
+                  type="number"
+                  name="date-year"
+                  id="date-year"
+                  placeholder="YY"
+                  max="99"
+                />
+              </div>
+            </div>
+            <div class="input-container">
+              <label for="cvc">CVC</label>
+              <input type="number" name="cvc" id="cvc" placeholder="e.g. 123" />
+            </div>
+          </div>
+          <button type="submit">Confirm</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

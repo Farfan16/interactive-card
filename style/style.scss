@@ -1,0 +1,174 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+$red: #ff5252;
+$White: #ffffff;
+$Light-grayish-violet: #dedddf;
+$Dark-grayish-violet: #8e8593;
+$Very-dark-violet: #21092f;
+
+html,
+body,
+p {
+  margin: 0;
+}
+body {
+  display: flex;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background: white;
+}
+
+.background-card {
+  background: url(../images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  @include center;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+}
+
+.card-front {
+  background: url(../images/bg-card-front.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 15rem;
+  right: -5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: fit-content;
+  height: 10rem;
+  padding: 1rem;
+  z-index: 10;
+  border-radius: 0.7rem;
+  box-shadow: 10px 10px 24px -2px rgba(0, 0, 0, 0.28);
+  -webkit-box-shadow: 10px 10px 24px -2px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 10px 10px 24px -2px rgba(0, 0, 0, 0.28);
+
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 28px;
+    font-weight: 300;
+    color: $White;
+
+    .user-info {
+      font-size: 12px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.card-back {
+  background: url(../images/bg-card-back.png);
+  background-size: cover;
+  @extend .card-front;
+  z-index: 20;
+  top: 30rem;
+  right: -10rem;
+  width: 19.3rem;
+  color: $White;
+  justify-content: center;
+  align-items: flex-end;
+
+  .card-cvc {
+    color: $Light-grayish-violet;
+    margin-bottom: 3px;
+    margin-right: 1rem;
+  }
+}
+
+.form-container {
+  @include center;
+  flex-direction: column;
+  width: 70%;
+  background-color: $White;
+}
+
+.form {
+  @include center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 10rem;
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    width: 76%;
+
+    label {
+      color: $Very-dark-violet;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: 2px;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 0.4rem;
+      border: 1px solid $Light-grayish-violet;
+      ::placeholder {
+        color: $Dark-grayish-violet;
+      }
+      &[type="text"] {
+        width: 100%;
+      }
+    }
+  }
+
+  .date-cvc {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+
+    .input-container {
+      width: 100%;
+
+      .month-year {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+      }
+
+      &:last-child {
+        input {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  button {
+    @include center;
+    display: inline-flex;
+    background-color: $Very-dark-violet;
+    width: 80%;
+    border-radius: 0.5rem;
+    border: 0;
+    color: $White;
+    padding: 0.6rem;
+  }
+}
