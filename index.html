@@ -42,6 +42,7 @@
               name="name"
               id="name"
               placeholder="e.g John Doe"
+              onkeyup="setCardName()"
             />
           </div>
           <div class="input-container">
@@ -50,7 +51,8 @@
               type="text"
               name="card-number"
               id="card-number"
-              placeholder="e.g John Doe"
+              placeholder="e.g 1234 5678 9123 0000"
+              onkeyup="setCardNumber()"
             />
           </div>
           <div class="date-cvc">
@@ -64,6 +66,8 @@
                   placeholder="MM"
                   min="1"
                   max="12"
+                  onkeyup="setCardMonth()"
+                  onchange="setCardMonth()"
                 />
                 <input
                   type="number"
@@ -71,17 +75,27 @@
                   id="date-year"
                   placeholder="YY"
                   max="99"
+                  onkeyup="setCardYear()"
+                  onchange="setCardYear()"
                 />
               </div>
             </div>
             <div class="input-container">
               <label for="cvc">CVC</label>
-              <input type="number" name="cvc" id="cvc" placeholder="e.g. 123" />
+              <input
+                type="number"
+                name="cvc"
+                id="cvc"
+                placeholder="e.g. 123"
+                onkeyup="setCardCVC()"
+                onchange="setCardCVC()"
+              />
             </div>
           </div>
           <button type="submit">Confirm</button>
         </form>
       </div>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
