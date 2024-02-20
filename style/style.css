@@ -41,7 +41,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: fit-content;
+  width: 19.3rem;
   height: 10rem;
   padding: 1rem;
   z-index: 10;
@@ -71,7 +71,6 @@ body {
   z-index: 20;
   top: 30rem;
   right: -10rem;
-  width: 19.3rem;
   color: #ffffff;
   justify-content: center;
   align-items: flex-end;
@@ -152,7 +151,8 @@ body {
   border-radius: 0.5rem;
   border: 0;
   color: #ffffff;
-  padding: 0.6rem;
+  padding: 0.8rem;
+  letter-spacing: 1px;
 }
 
 /*# sourceMappingURL=style.css.map */
