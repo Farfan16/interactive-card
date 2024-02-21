@@ -112,6 +112,14 @@ body {
   font-size: 12px;
   margin-bottom: 8px;
 }
+.form .input-container label.error {
+  color: #ff5252;
+  font-size: 10px;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 700;
+  margin-top: 5px;
+}
 .form .input-container input {
   width: 100%;
   padding: 0.6rem;
@@ -123,6 +131,12 @@ body {
 }
 .form .input-container input[type=text] {
   width: 100%;
+}
+.form .input-container input:focus {
+  border-color: #21092f;
+}
+.form .input-container input.error-input {
+  border: 1px solid #ff5252;
 }
 .form .date-cvc {
   display: flex;
@@ -153,6 +167,11 @@ body {
   color: #ffffff;
   padding: 0.8rem;
   letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.disable {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="form-container">
-        <form action="" class="form">
+        <form id="formId" class="form">
           <div class="input-container">
             <label for="name">Cardholder Name</label>
             <input
@@ -44,6 +44,7 @@
               placeholder="e.g John Doe"
               onkeyup="setCardName()"
             />
+            <label for="card-number" id="errorName" class="disable"></label>
           </div>
           <div class="input-container">
             <label for="card-number">Card Number</label>
@@ -54,6 +55,9 @@
               placeholder="e.g 1234 5678 9123 0000"
               onkeyup="setCardNumber()"
             />
+            <label for="card-number" id="errorNumber" class="disable"
+              >Tess</label
+            >
           </div>
           <div class="date-cvc">
             <div class="input-container">
@@ -79,6 +83,9 @@
                   onchange="setCardYear()"
                 />
               </div>
+              <label for="card-number" id="errorExpDate" class="disable"
+                >Can't be blank</label
+              >
             </div>
             <div class="input-container">
               <label for="cvc">CVC</label>
@@ -90,9 +97,12 @@
                 onkeyup="setCardCVC()"
                 onchange="setCardCVC()"
               />
+              <label for="card-number" id="errorCVC" class="disable"
+                >Tess</label
+              >
             </div>
           </div>
-          <button type="submit">Confirm</button>
+          <button type="submit" id="submitForm">Confirm</button>
         </form>
       </div>
     </main>
