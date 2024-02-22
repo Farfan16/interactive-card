@@ -36,11 +36,11 @@
       <div class="form-container">
         <form id="formId" class="form">
           <div class="input-container">
-            <label for="name">Cardholder Name</label>
+            <label for="card-name">Cardholder Name</label>
             <input
               type="text"
-              name="name"
-              id="name"
+              name="card-name"
+              id="card-name"
               placeholder="e.g John Doe"
               onkeyup="setCardName()"
             />
@@ -61,7 +61,7 @@
           </div>
           <div class="date-cvc">
             <div class="input-container">
-              <label for="date">Exp. Date (MM/YY)</label>
+              <label for="date-month">Exp. Date (MM/YY)</label>
               <div class="month-year">
                 <input
                   type="number"
@@ -83,7 +83,7 @@
                   onchange="setCardYear()"
                 />
               </div>
-              <label for="card-number" id="errorExpDate" class="disable"
+              <label for="date-month" id="errorExpDate" class="disable"
                 >Can't be blank</label
               >
             </div>

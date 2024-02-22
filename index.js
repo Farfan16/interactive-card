@@ -4,7 +4,7 @@ const cardMonthExp = document.querySelector("#month-exp");
 const cardYearExp = document.querySelector("#year-exp");
 const cardCVC = document.querySelector("#card-cvc");
 
-const inputName = document.querySelector("#name");
+const inputName = document.querySelector("#card-name");
 const inputCardNumber = document.querySelector("#card-number");
 const inputMonth = document.querySelector("#date-month");
 const inputYear = document.querySelector("#date-year");
