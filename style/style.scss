@@ -14,7 +14,8 @@ $Very-dark-violet: #21092f;
 
 html,
 body,
-p {
+p,
+h1 {
   margin: 0;
 }
 body {
@@ -191,4 +192,26 @@ body {
 
 .disable {
   display: none;
+}
+
+.succeed {
+  @extend .form;
+  align-items: center;
+  padding-left: 3.5rem;
+
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: $Very-dark-violet;
+  }
+  p {
+    font-weight: 700;
+    color: $Dark-grayish-violet;
+    letter-spacing: 0.5px;
+  }
+
+  button {
+    padding: 0.9rem 12rem;
+    margin-top: 2rem;
+  }
 }

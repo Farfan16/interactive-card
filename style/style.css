@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 html,
 body,
-p {
+p,
+h1 {
   margin: 0;
 }
 
@@ -90,7 +91,7 @@ body {
   background-color: #ffffff;
 }
 
-.form {
+.form, .succeed {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,12 +100,12 @@ body {
   gap: 1rem;
   padding-left: 10rem;
 }
-.form .input-container {
+.form .input-container, .succeed .input-container {
   display: flex;
   flex-direction: column;
   width: 76%;
 }
-.form .input-container label {
+.form .input-container label, .succeed .input-container label {
   color: #21092f;
   text-transform: uppercase;
   font-weight: 500;
@@ -112,7 +113,7 @@ body {
   font-size: 12px;
   margin-bottom: 8px;
 }
-.form .input-container label.error {
+.form .input-container label.error, .succeed .input-container label.error {
   color: #ff5252;
   font-size: 10px;
   text-transform: none;
@@ -120,42 +121,42 @@ body {
   font-weight: 700;
   margin-top: 5px;
 }
-.form .input-container input {
+.form .input-container input, .succeed .input-container input {
   width: 100%;
   padding: 0.6rem;
   border-radius: 0.4rem;
   border: 1px solid #dedddf;
 }
-.form .input-container input ::placeholder {
+.form .input-container input ::placeholder, .succeed .input-container input ::placeholder {
   color: #8e8593;
 }
-.form .input-container input[type=text] {
+.form .input-container input[type=text], .succeed .input-container input[type=text] {
   width: 100%;
 }
-.form .input-container input:focus {
+.form .input-container input:focus, .succeed .input-container input:focus {
   border-color: #21092f;
 }
-.form .input-container input.error-input {
+.form .input-container input.error-input, .succeed .input-container input.error-input {
   border: 1px solid #ff5252;
 }
-.form .date-cvc {
+.form .date-cvc, .succeed .date-cvc {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   width: 100%;
 }
-.form .date-cvc .input-container {
+.form .date-cvc .input-container, .succeed .date-cvc .input-container {
   width: 100%;
 }
-.form .date-cvc .input-container .month-year {
+.form .date-cvc .input-container .month-year, .succeed .date-cvc .input-container .month-year {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
 }
-.form .date-cvc .input-container:last-child input {
+.form .date-cvc .input-container:last-child input, .succeed .date-cvc .input-container:last-child input {
   width: 50%;
 }
-.form button {
+.form button, .succeed button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,6 +173,25 @@ body {
 
 .disable {
   display: none;
+}
+
+.succeed {
+  align-items: center;
+  padding-left: 3.5rem;
+}
+.succeed h1 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #21092f;
+}
+.succeed p {
+  font-weight: 700;
+  color: #8e8593;
+  letter-spacing: 0.5px;
+}
+.succeed button {
+  padding: 0.9rem 12rem;
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
