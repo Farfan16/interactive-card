@@ -10,6 +10,7 @@ const inputMonth = document.querySelector("#date-month");
 const inputYear = document.querySelector("#date-year");
 const inputCVC = document.querySelector("#cvc");
 const formId = document.querySelector("#formId");
+const succeedId = document.querySelector("#succeed");
 
 const errorName = document.querySelector("#errorName");
 const errorNumber = document.querySelector("#errorNumber");
@@ -111,7 +112,6 @@ const submitCard = () => {
   } else if (!numberFilter.test(inputCardNumber.value)) {
     labelErrorHandler(true, errorNumber, inputCardNumber, "format");
   } else {
-    console.log(!numberFilter.test(inputCardNumber.value));
     labelErrorHandler(false, errorNumber, inputCardNumber);
   }
   if (inputMonth.value == 0 || inputYear.value == 0) {
@@ -137,5 +137,18 @@ const submitCard = () => {
   } else {
     labelErrorHandler(false, errorCVC, inputCVC, "");
   }
-  console.log("Berhasil yay!");
+  if (
+    (inputName.value != "") &
+    (inputCardNumber.value != "") &
+    (inputMonth.value != 0) &
+    (inputYear.value != 0) &
+    (inputCVC.value != 0)
+  ) {
+    formId.classList.add("disable");
+    succeedId.classList.remove("disable");
+  }
+};
+
+const refresh = () => {
+  location.reload();
 };
